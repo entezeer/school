@@ -1,0 +1,134 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>ШГ №31</title>
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href={% static 'image/favicon.ico' %} type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static 'style.css' %} />
+</head>
+
+<body style="background:#ffbf80 ;">
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #ffbf80" >
+
+        <a class="navbar-brand ml-1" href="/">
+                <img src={% static "image/cropped-logo2-300x300.png" %} alt="" style="width:90px;">
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about'%}">О нас</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Учебно-методическая работа
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
+                        <a class="dropdown-item" href="{% url 'structure' %}">Структура</a>
+                        <a class="dropdown-item" href="{% url 'method_theme' %}">Методическая тема</a>
+                        <a class="dropdown-item" href="{% url 'plan' %}">План работы</a>
+                        <a class="dropdown-item" href="{% url 'normative' %}">Нормативные документы</a>
+=======
+                        <a class="dropdown-item" href="#">Структура</a>
+                        <a class="dropdown-item" href="#">Методическая тема</a>
+                        <a class="dropdown-item" href="#">План работы</a>
+                        <a class="dropdown-item" href="#">Нормативные документы</a>
+>>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Воспитательная работа</a>
+
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Деятельность школы
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'pedsostav' %}">Педагогический состав</a>
+<<<<<<< HEAD
+                        <a class="dropdown-item" href="{% url 'progress' %}">Достижения школы</a>
+                        <a class="dropdown-item" href="{% url 'parliament' %}">Школьный парламент</a>
+                        <a class="dropdown-item" href="{% url 'events' %}">Мероприятия, конкурсы</a>
+                        <a class="dropdown-item" href="{% url 'circle' %}">Кружки</a>
+=======
+                        <a class="dropdown-item" href="#">Достижения школы</a>
+                        <a class="dropdown-item" href="#">Школьный парламент</a>
+                        <a class="dropdown-item" href="#">Мероприятия, конкурсы</a>
+                        <a class="dropdown-item" href="#">Кружки</a>
+>>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Для родителей</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Для учащихся</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'feedback'%}" class="nav-link">Написать нам</a>
+                </li>
+            </ul>
+
+        </div>
+        </div>
+    </nav>
+
+{% block body %}
+{% endblock %}
+
+    {# footer #}
+
+    <footer class="footer mt-5" style="background: #ff9933
+">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src={% static "image/cropped-logo2-300x300.png" %} alt="" width="200">
+                </div>
+                <div class="col-lg-5 order-md-3 col-sm-12 mt-5">
+                    <h4>Школа-гимназия №31</h4>
+                    <p>gimnazia31@mail.ru</p>
+                    <p>+(996) 312 64-30-38</p>
+                    <p>г.Бишкек, Ленинский р-н, ул. Павлова, 14</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                    <img src={% static "image/face.png" %} alt="" style="width:50px;">
+                    <img src={% static "image/go.png" %} alt="" style="width:50px;">
+                    <img src={% static "image/inst.png" %} alt="" style="width:50px;">
+                    <img src={% static "image/tw.png" %} alt="" style="width:50px;">
+                    <img src={% static "image/vk.png" %} alt="" style="width:50px;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

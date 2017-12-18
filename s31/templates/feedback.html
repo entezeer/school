@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load staticfiles %}
+
+<div class="container mt-5 mb-5 text-center rounded p-3" style="background: white">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12"></div>
+{% for message in messages %}
+    <div class="{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+    <h2>
+        Написать нам
+    </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ feedback_form.as_p }}
+        <input type="submit" value="Отправить">
+
+    </form>{% if user.is_superuser %}
+    <a href="{% url 'feedbacks' %}">feedbacks</a>
+    {% endif %}
+</div>
+</div>
+
+{% endblock %}

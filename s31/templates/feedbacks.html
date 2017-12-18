@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load staticfiles %}
+<h2>Сообщения</h2>
+
+    <div class="container mt-5 mb-5">
+    {% for feedback in feedbacks %}
+        
+                    <div class="card">
+        				    <div class="card-body" ><div class="block-text rel zmin">
+						        <a title="" href="#">message</a>
+							    
+						        <p>{{ feedback.text }}</p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+                                <p><b>{{ feedback.name }}</b></p>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7DP1EDAhnllQaXnR4xhL1LJiH0Yq0mYem5ZEDXMO7OdmQEEj4" alt="" style="height: 100px;border-radius: 30px">
+
+                                <a title="" href="#">{{ feedback.email }}</a>
+
+
+							</div>
+                            </div>
+						</div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

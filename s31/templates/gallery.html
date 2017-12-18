@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load staticfiles %}
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+    {% for photo in photos %}
+<div class="col-lg-3 col-md-6 col-sm-12">
+<div class="card" style="width: 300px">
+    <a href="#" id="{{ photo.id }}" data-toggle="modal" data-target="#exampleModal{{ photo.id }}"><img src="{{ photo.img.url }}" alt="" style="width:300px; height: 200px" ></a>
+</div>
+</div>
+<div class="modal fade" id="exampleModal{{ photo.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true" >
+    <div class="modal-dialog modal-lg" role="document" >
+        <div class="modal-content" >
+
+            <div class="modal-body" >
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <img id="{{ photo.id }}" src="{{ photo.img.url }}" alt="" width="100%">
+                <p>{{ photo.text }}</p>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+    {% endfor %}
+</div>
+</div>
+
+
+{% endblock %}

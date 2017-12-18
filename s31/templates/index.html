@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% block body%}
+{% load staticfiles %}
+
+    <header class="header" style="background-image: url({% static 'image/Books.jpg' %});">
+        <h3 class="display-2" style="color:white;text-shadow:black 2px 3px 4px; ">
+            Школа-гимназия №31
+        </h3>
+        <p class="lead" style="color:black;text-shadow:white 1px 2px 3px;"><b>г.Бишкек, ул.Павлова,14</b></p>
+        </div>
+    </header>
+
+    <div class="container-fluid" style="background: #ffb366
+">
+        <div class="row">
+<<<<<<< HEAD
+            <div class="col-lg-3 col-md-6 order-md-1 col-sm-12 mt-5">
+=======
+            <div class="col-lg-3 col-md-6 order-md-2 col-sm-12 mt-5">
+>>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-warning">
+    Новости
+  </a>
+                    <a href="{% url 'info'%}" class="list-group-item list-group-item-warning">Сведения о школе</a>
+                    <a href="{% url 'dopinfo'%}" class="list-group-item list-group-item-warning">Дополнительные сведения</a>
+                    <a href="{% url 'gallery'%}" class="list-group-item list-group-item-warning">Галерея</a>
+                    <a href="{% url 'shedule'%}" class="list-group-item list-group-item-warning">Расписание занятий</a>
+                    <a href="#" class="list-group-item list-group-item-warning">Олимпиады и конкурсы</a>
+                    <a href="#" class="list-group-item list-group-item-warning">Прием в 1-й класс</a>
+                    <a href="#" class="list-group-item list-group-item-warning">СМИ о нас</a>
+                </div>
+                <div class="card mt-1">
+                    <img src={% static "image/to.jpg" %} alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Директор ШГ №31</h4>
+                        <p class="card-text">Омурзакова Т.О.</p>
+                    </div>
+                </div>
+            </div>
+<<<<<<< HEAD
+            <div class="col-lg-6 col-md-6 order-md-2 col-sm-12">
+=======
+            <div class="col-lg-6 col-md-6 col-sm-12">
+>>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+                <h2>Новости</h2>
+
+                {% for article in articles %}
+                <div class="card mt-2 mb-5">
+                    <img src="{{ article.img.url }}" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ article.title|linebreaksbr }}</h4>
+
+                        <div class="collapse" id="collapseExample{{ article.id }}">
+
+                            <p class="card-text"> {{ article.content }}</p>
+                        </div>
+
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample{{ article.id }}" aria-expanded="false" aria-controls="collapseExample">
+                                Читать полностью
+                         </a>
+
+
+                        <p style="float: right">{{ article.published_date }}</p>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+
+
+
+            </div>
+            <div class="col-lg-3 col-md-6 order-md-3 col-sm-12 mt-5">
+                <div class="card">
+<<<<<<< HEAD
+                    <a href="https://2gis.kg/bishkek/firm/70000001019356093%2C74.566795%2C42.878692?queryState=center%2F74.567087%2C42.878873%2Fzoom%2F18"><img src={% static "image/scho.png" %} alt="" class="card-img-top"></a>
+=======
+                    <img src={% static "image/scho.png" %} alt="" class="card-img-top">
+>>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+                    <div class="card-body">
+                        <h4 class="card-title">Школа-гимназия №31</h4>
+                        <p class="card-text">. . . . . . . .</p>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <h4 class="card-title">Галерея</h4>
+                    <div class="row">
+                        <div class="col ml-2">
+<<<<<<< HEAD
+                            <a href="{% url 'gallery' %}"><img src={% static "image/222.jpg" %} alt="" class="card-img"></a>
+                        </div>
+                        <div class="col mr-2">
+                            <a href="{% url 'gallery' %}"><img src={% static "image/22.jpg" %} alt="" class="card-img"></a>
+=======
+                            <img src={% static "image/222.jpg" %} alt="" class="card-img">
+                        </div>
+                        <div class="col mr-2">
+                            <img src={% static "image/22.jpg" %} alt="" class="card-img">
+>>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col ml-2">
+<<<<<<< HEAD
+                            <a href="{% url 'gallery' %}"><img src={% static "image/2222.jpg" %} alt="" class="card-img"></a>
+                        </div>
+                        <div class="col mr-2">
+                            <a href="{% url 'gallery' %}"><img src={% static "image/22222.jpg" %} alt="" class="card-img"></a>
+=======
+                            <img src={% static "image/2222.jpg" %} alt="" class="card-img">
+                        </div>
+                        <div class="col mr-2">
+                            <img src={% static "image/22222.jpg" %} alt="" class="card-img">
+>>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
