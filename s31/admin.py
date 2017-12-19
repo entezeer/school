@@ -11,5 +11,5 @@ admin.site.register(Article)
 
 admin.site.register(Photo)
 
-admin.site.register(Photo)
+
 

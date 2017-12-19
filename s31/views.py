@@ -109,5 +109,3 @@ class ParliamentView(TemplateView):
     template_name = 'activities/parliament.html'
 
 
-    template_name = 'pedsostav.html'
-
