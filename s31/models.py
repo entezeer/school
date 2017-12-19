@@ -31,9 +31,15 @@ class Feedback(models.Model):
 class Photo(models.Model):
     img = models.ImageField(upload_to='media/', null=True, blank=True)
     text =models.CharField(max_length=255,verbose_name="text")
-
     id = models.IntegerField(primary_key=True)
 
 
-    id = models.IntegerField(primary_key=True)
-
+class Teacher(models.Model):
+    img = models.ImageField(upload_to='media/', null=True, blank=True)
+    position = models.CharField(max_length=255,verbose_name=u"Должность")
+    number = models.IntegerField(verbose_name=u"Номер")
+    name = models.CharField(max_length=255,verbose_name=u"Имя")
+    email = models.CharField(max_length=30,verbose_name=u"email")
+    id = models.IntegerField(primary_key=True,verbose_name="id")
+    def __str__(self):
+        return self.position

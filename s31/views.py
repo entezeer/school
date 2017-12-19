@@ -11,7 +11,7 @@ from django.utils import timezone
 from django.views.generic import TemplateView
 
 from s31.forms import FeedBackForm
-from .models import Article, Feedback, Photo
+from .models import Article, Feedback, Photo, Teacher
 
 
 # Create your views here.
@@ -77,6 +77,13 @@ class PedsostavView(TemplateView):
 
     template_name = 'activities/pedsostav.html'
 
+    def dispatch(self, request, *args, **kwargs):
+
+        context ={
+            'teachers':Teacher.objects.all()
+        }
+        return  render(request, self.template_name, context)
+
 class SheduleView(TemplateView):
     template_name = 'shedule.html'
 
@@ -88,10 +95,8 @@ class MethodView(TemplateView):
 class PlanView(TemplateView):
     template_name = 'method/plan.html'
 
-
 class StructureView(TemplateView):
     template_name = 'method/structure.html'
-
 
 class NormativeView(TemplateView):
     template_name = 'method/normative.html'
