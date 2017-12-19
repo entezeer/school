@@ -31,9 +31,9 @@ class Feedback(models.Model):
 class Photo(models.Model):
     img = models.ImageField(upload_to='media/', null=True, blank=True)
     text =models.CharField(max_length=255,verbose_name="text")
-<<<<<<< HEAD
+
     id = models.IntegerField(primary_key=True)
 
-=======
+
     id = models.IntegerField(primary_key=True)
->>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+

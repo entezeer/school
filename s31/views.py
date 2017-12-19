@@ -39,12 +39,10 @@ class GalleryView(TemplateView):
         }
         return  render(request, self.template_name, context)
 
-<<<<<<< HEAD
-=======
 class SheduleView(TemplateView):
     template_name = 'shedule.html'
 
->>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+
 class DopinfoView(TemplateView):
     template_name = 'dopinfo.html'
 
@@ -76,7 +74,7 @@ class FeedView(TemplateView):
         return  render(request, self.template_name, context)
 
 class PedsostavView(TemplateView):
-<<<<<<< HEAD
+
     template_name = 'activities/pedsostav.html'
 
 class SheduleView(TemplateView):
@@ -110,6 +108,6 @@ class CircleView(TemplateView):
 class ParliamentView(TemplateView):
     template_name = 'activities/parliament.html'
 
-=======
+
     template_name = 'pedsostav.html'
->>>>>>> 366f1018d787ae7b8faf0c777c0e6289ae2d948a
+
