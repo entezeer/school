@@ -11,7 +11,7 @@ from django.utils import timezone
 from django.views.generic import TemplateView
 
 from s31.forms import FeedBackForm
-from .models import Article, Feedback, Photo, Teacher, Person
+from .models import Article, Feedback, Photo, Teacher
 
 
 # Create your views here.
@@ -115,7 +115,7 @@ class ParliamentView(TemplateView):
 
 
 from django.shortcuts import render
-from django_tables2 import RequestConfig
-from .models import Person
+
+
 
 
