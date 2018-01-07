@@ -15,7 +15,6 @@ from .views import article_list
 
 urlpatterns = [
     url(r'^$', views.article_list, name='article_list'),
-    url(r'^table/$', views.people, name='people'),
     url(r'^$', HomeView.as_view()),
     url(r'^admin/', admin.site.urls),
     url(r'^about/$', AboutView.as_view(),name='about' ),

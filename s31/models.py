@@ -44,5 +44,4 @@ class Teacher(models.Model):
     def __str__(self):
         return self.position
 
-class Person(models.Model):
-    name = models.CharField('full name', max_length=50)
+
