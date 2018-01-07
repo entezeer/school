@@ -5,7 +5,7 @@ from . import views
 from django.conf.urls.static import static
 
 from s31.views import AboutView, InfoView, GalleryView, SheduleView, DopinfoView, FeedbackView, FeedView, PedsostavView, \
-    MethodView, PlanView, StructureView, ParliamentView, CircleView, EventView, ProgressView
+    MethodView, PlanView, StructureView, ParliamentView, CircleView, EventView, ProgressView, NormativeView
 
 from s31.views import AboutView, InfoView, GalleryView, SheduleView, DopinfoView, FeedbackView, FeedView, PedsostavView
 from .views import HomeView
@@ -15,6 +15,7 @@ from .views import article_list
 
 urlpatterns = [
     url(r'^$', views.article_list, name='article_list'),
+    url(r'^table/$', views.people, name='people'),
     url(r'^$', HomeView.as_view()),
     url(r'^admin/', admin.site.urls),
     url(r'^about/$', AboutView.as_view(),name='about' ),
@@ -32,7 +33,7 @@ urlpatterns = [
     url(r'^method/method_theme/$', MethodView.as_view(), name="method_theme"),
     url(r'^method/plan/$', PlanView.as_view(), name="plan"),
     url(r'^method/structure/$', StructureView.as_view(), name="structure"),
-    url(r'^method/normative/$', PedsostavView.as_view(), name="normative"),
+    url(r'^method/normative/$', NormativeView.as_view(), name="normative"),
     url(r'^pedsostav/$', PedsostavView.as_view(), name="pedsostav"),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) \
             + static(settings.STATIC_URL, document_root = settings.STATICFILES_DIRS)

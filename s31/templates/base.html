@@ -59,7 +59,6 @@
         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'pedsostav' %}">Педагогический состав</a>
-
                         <a class="dropdown-item" href="{% url 'progress' %}">Достижения школы</a>
                         <a class="dropdown-item" href="{% url 'parliament' %}">Школьный парламент</a>
                         <a class="dropdown-item" href="{% url 'events' %}">Мероприятия, конкурсы</a>
@@ -71,7 +70,7 @@
                     <a class="nav-link" href="#">Для родителей</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Для учащихся</a>
+                    <a class="nav-link" href="{% url 'people' %}">Для учащихся</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'feedback'%}" class="nav-link">Написать нам</a>

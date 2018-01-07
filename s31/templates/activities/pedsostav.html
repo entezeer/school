@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block body %}
 {% load staticfiles %}
+
+
 <style class="cp-pen-styles">/*------------------*
  * Global variables *
  *------------------*/
@@ -14,8 +16,6 @@
   margin: 0;
   padding: 0;
 }
-
-
 
 a {
   color: inherit;
@@ -183,7 +183,7 @@ a:hover {
 
 
 
-<div class="container">
+<div class="container p-5 mt-5 mb-5" style="background: white;">
 
 <div class="row">
 {% for teacher in teachers %}

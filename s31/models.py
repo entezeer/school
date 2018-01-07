@@ -20,6 +20,7 @@ class Article(models.Model):
     def publish(self):
         self.published_date = timezone.now()
         self.save()
+
     def __str__(self):
         return self.title
 
@@ -33,7 +34,6 @@ class Photo(models.Model):
     text =models.CharField(max_length=255,verbose_name="text")
     id = models.IntegerField(primary_key=True)
 
-
 class Teacher(models.Model):
     img = models.ImageField(upload_to='media/', null=True, blank=True)
     position = models.CharField(max_length=255,verbose_name=u"Должность")
@@ -43,3 +43,6 @@ class Teacher(models.Model):
     id = models.IntegerField(primary_key=True,verbose_name="id")
     def __str__(self):
         return self.position
+
+class Person(models.Model):
+    name = models.CharField('full name', max_length=50)
