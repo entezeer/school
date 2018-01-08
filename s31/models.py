@@ -29,10 +29,16 @@ class Feedback(models.Model):
     email = models.EmailField(max_length=255, verbose_name=u"Email")
     text = models.TextField(verbose_name=u"Сообщение")
 
+    def __str__(self):
+        return self.name
+
 class Photo(models.Model):
     img = models.ImageField(upload_to='media/', null=True, blank=True)
     text =models.CharField(max_length=255,verbose_name="text")
     id = models.IntegerField(primary_key=True)
+
+    def __str__(self):
+        return self.id
 
 class Teacher(models.Model):
     img = models.ImageField(upload_to='media/', null=True, blank=True)
@@ -42,6 +48,6 @@ class Teacher(models.Model):
     email = models.CharField(max_length=30,verbose_name=u"email")
     id = models.IntegerField(primary_key=True,verbose_name="id")
     def __str__(self):
-        return self.position
+        return self.name
 
 
