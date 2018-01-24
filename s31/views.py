@@ -113,6 +113,8 @@ class CircleView(TemplateView):
 class ParliamentView(TemplateView):
     template_name = 'activities/parliament.html'
 
+class MoView(TemplateView):
+    template_name = 'method/mo.html'
 
 from django.shortcuts import render
 

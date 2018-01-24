@@ -38,7 +38,7 @@ class Photo(models.Model):
     id = models.IntegerField(primary_key=True)
 
     def __str__(self):
-        return self.id
+        return self.text
 
 class Teacher(models.Model):
     img = models.ImageField(upload_to='media/', null=True, blank=True)
